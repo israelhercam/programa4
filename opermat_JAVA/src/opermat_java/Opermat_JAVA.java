@@ -39,8 +39,7 @@ public static void main(String[] args) {
      Desktop.getDesktop().open(path);
 }catch (IOException ex) {
 }
-        }
-    }
+    }}}
 public static String[] eliminar_caracteres(String string){
     String[] lista2;
     ArrayList<String> lista = new ArrayList<>( );
