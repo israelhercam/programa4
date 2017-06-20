@@ -9,6 +9,9 @@ package opermat_java;
  *
  * @author Alienware
  */
+import java.awt.Desktop;
+import java.io.File;
+import java.io.IOException;
 import java.util.Scanner;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -30,6 +33,12 @@ public static void main(String[] args) {
             System.out.println(Arrays.toString(eliminar_caracteres(comando)));
             if ("fin".equals(com) || "finalizar".equals(com))
                 finalizar_programa=true;
+            if ("ayu".equals(com) || "ayuda".equals(com)){
+                try {
+     File path = new File ("manual_de_usuario_opermat_JAVA1.pdf");
+     Desktop.getDesktop().open(path);
+}catch (IOException ex) {
+}
         }
     }
 public static String[] eliminar_caracteres(String string){
